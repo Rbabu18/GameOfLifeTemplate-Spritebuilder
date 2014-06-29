@@ -29,6 +29,27 @@ static const int GRID_COLUMNS = 10;
     self.userInteractionEnabled = YES;
 }
 
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    //get the x,y coordinates of the touch
+    CGPoint touchLocation = [touch locationInNode:self];
+    
+    //get the Creature at that location
+    Creature *creature = [self creatureForTouchPosition:touchLocation];
+    
+    //invert it's state - kill it if it's alive, bring it to life if it's dead.
+    creature.isAlive = !creature.isAlive;
+}
+
+- (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
+{
+    //get the row and column that was touched, return the Creature inside the corresponding cell
+    int row = touchPosition.x / _cellWidth;
+    int column = touchPosition.y / _cellHeight;
+
+    return _gridArray[row][column];
+}
+
 - (void)setupGrid
 {
     // divide the grid's size by the number of columns/rows to figure out the right width and height of each cell
