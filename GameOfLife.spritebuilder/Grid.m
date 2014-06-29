@@ -97,7 +97,8 @@ for (int i = 0; i < GRID_ROWS; i++) {
     
     //update the generation so the label's text will display the correct generation
     _generation++;
-    self.rotation = 180;
+    self.rotation = M_PI/180;
+
 }
 
 -(void) countNeighbors {
