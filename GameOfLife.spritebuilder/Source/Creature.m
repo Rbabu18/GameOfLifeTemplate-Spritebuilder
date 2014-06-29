@@ -14,11 +14,12 @@
 @implementation Creature
 - (instancetype)initCreature {
     // since we made Creature inherit from CCSprite, 'super' below refers to CCSprite
-    self = [super initWithImageNamed:@"ccbResources/GameOfLifeAssets/Assets/bubble.png"];
+    int randomIdx = arc4random()%5 + 1;
+   self = [super initWithImageNamed:[NSString stringWithFormat:@"ccbResources/GameOfLifeAssets/Assets/bubble%i.png",randomIdx]];
     
     if (self) {
         self.isAlive = NO;
-        [self animateCreature];
+        //[self animateCreature];
     }
     
     return self;
