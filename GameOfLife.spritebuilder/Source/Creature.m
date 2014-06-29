@@ -37,7 +37,7 @@
     
     NSMutableArray *animationFrames = [NSMutableArray array];
     
-    for(int i = 0; i <= MAX_ANIMATION_FRAMES; ++i)
+    for(int i = 1; i <= MAX_ANIMATION_FRAMES; ++i)
     {
         CCSpriteFrame *spriteFrame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName: [NSString stringWithFormat:@"ccbResources/GameOfLifeAssets/Assets/bubble%d.png", i]];
         [animationFrames addObject: spriteFrame];
