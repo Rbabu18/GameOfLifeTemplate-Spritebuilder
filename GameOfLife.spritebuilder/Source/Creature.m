@@ -18,6 +18,7 @@
     
     if (self) {
         self.isAlive = NO;
+        [self animateCreature];
     }
     
     return self;
