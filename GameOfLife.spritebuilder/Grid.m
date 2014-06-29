@@ -98,7 +98,7 @@ for (int i = 0; i < GRID_ROWS; i++) {
     //update the generation so the label's text will display the correct generation
     _generation++;
  
-    if (_generation%2 == 0) {
+    if (_generation%5 == 0) {
         [self setSpriteFrame:[CCSpriteFrame frameWithImageNamed:@"ccbResources/GameOfLifeAssets/Assets/grid2.png"]];
     } else {
         [self setSpriteFrame:[CCSpriteFrame frameWithImageNamed:@"ccbResources/GameOfLifeAssets/Assets/grid.png"]];
