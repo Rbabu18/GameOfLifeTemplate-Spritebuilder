@@ -57,7 +57,7 @@ for (int i = 0; i < GRID_ROWS; i++) {
         _gridArray[i][j] = creature;
         
         // make creatures visible to test this method, remove this once we know we have filled the grid properly
-        creature.isAlive = YES;
+        //creature.isAlive = YES;
         
         x+=_cellWidth;
     }
